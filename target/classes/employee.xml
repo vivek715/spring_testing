@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <element>
+        <empDeptId>162</empDeptId>
+        <empDoj>1998-10-10</empDoj>
+        <empId>12</empId>
+        <empName>raju</empName>
+        <empSal>78965</empSal>
+    </element>
+    <element>
+        <empDeptId>4323</empDeptId>
+        <empDoj>2019-06-09</empDoj>
+        <empId>22</empId>
+        <empName>saireddy</empName>
+        <empSal>444</empSal>
+    </element>
+    <element>
+        <empDeptId>321</empDeptId>
+        <empDoj>1998-10-10</empDoj>
+        <empId>111</empId>
+        <empName>harshanew</empName>
+        <empSal>67000</empSal>
+    </element>
+    <element>
+        <empDeptId>132</empDeptId>
+        <empDoj>2019-06-09</empDoj>
+        <empId>213</empId>
+        <empName>svivek</empName>
+        <empSal>30000</empSal>
+    </element>
+    <element>
+        <empDeptId>43</empDeptId>
+        <empDoj>2012-06-09</empDoj>
+        <empId>22412</empId>
+        <empName>ff</empName>
+        <empSal>4447860</empSal>
+    </element>
+</root>

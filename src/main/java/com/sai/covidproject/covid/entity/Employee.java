@@ -1,73 +1,54 @@
 package com.sai.covidproject.covid.entity;
 
+
+import lombok.Data;
+
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+import java.sql.Date;
 
-    import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
+//CREATE TABLE `emp` (
+//  `empId` int(11) NOT NULL,
+//  `empName` varchar(20) DEFAULT NULL,
+//  `EmpDoj` date DEFAULT NULL,
+//  `EmpSal` float DEFAULT NULL,
+//  `EmpDeptId` int(11) DEFAULT NULL,
+//  PRIMARY KEY (`empId`)
+//)
+    @XmlRootElement(name = "Employee")
+    @XmlType(propOrder = {"empId","empname","empdoj","empdeptid","empsal"})
+    @Data
     @Entity
-    @Table(name = "tbl_empdetails")
+    @Table(name = "emp")
     public class Employee {
-
-        private long id;
-        private String firstName;
-        private String lastName;
-        @Column(name = "classname")
-        public int getClassname() {
-            return classname;
-        }
-
-        public void setClassname(int classname) {
-            this.classname = classname;
-        }
-
-        private int classname;
-
-        public Employee() {
-
-        }
-
-        public Employee(String firstName, String lastName, int classname) {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.classname=classname;
-        }
-
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
-        @Column(name = "id")
-        public long getId() {
-            return id;
-        }
-        public void setId(long id) {
-            this.id = id;
-        }
+        @Column (name="empid")
+        private Integer empId;
 
-        @Column(name = "first_name")
-        public String getFirstName() {
-            return firstName;
-        }
-        public void setFirstName(String firstName) {
-            this.firstName = firstName;
-        }
+        @Column(name="empname")
+        private String empName;
 
-        @Column(name = "last_name")
-        public String getLastName() {
-            return lastName;
-        }
-        public void setLastName(String lastName) {
-            this.lastName = lastName;
-        }
+        @Column(name="empdoj")
+        private Date EmpDoj;
+
+        @Column(name="empdeptid")
+        private Integer empDeptId;
+
+        @Column(name="empsal")
+        private Float EmpSal;
 
         @Override
         public String toString() {
-            return "Employee [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", emailId=" + classname
-                    + "]";
+            return "Employee{" +
+                    "empId=" + empId +
+                    ", empName='" + empName + '\'' +
+                    ", EmpDoj=" + EmpDoj +
+                    ", empDeptId=" + empDeptId +
+                    ", EmpSal=" + EmpSal +
+                    '}';
         }
-
     }
 
